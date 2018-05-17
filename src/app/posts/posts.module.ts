@@ -23,4 +23,4 @@ const routes: Routes = [
   ],
   providers: [PostService]
 })
-export class PostsModule {}
+export class PostsModule { }
