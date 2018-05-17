@@ -48,3 +48,4 @@ src/environments/
 firestore.indexes.json
 firebase.json
 .vscode/settings.json
+firebase-debug.log
