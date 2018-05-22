@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router'
 const routes: Routes = [
   { path: '', redirectTo: '/blog', pathMatch: 'full' },
   { path: '', loadChildren: './posts/posts.module#PostsModule' },
+  { path: '**', redirectTo: '/error', pathMatch: 'full'}
 ]
 
 @NgModule({

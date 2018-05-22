@@ -51,7 +51,8 @@ export class PostDashboardComponent implements OnInit {
     const path = `posts/${file.name}`
     if (file.type.split('/')[0] !== 'image') {
       return alert('only image files')
-    } else {
+    } 
+    else {
       const task = this.storage.upload(path, file)
       this.downloadURL = task.downloadURL()
       this.uploadPercent = task.percentageChanges()

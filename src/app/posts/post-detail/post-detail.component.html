@@ -4,6 +4,18 @@
   <div [hidden]="!editing">
     <mat-card>
       <h1>Edit Post</h1>
+
+      <input style="display: none" type="file" name="file" #file id="file" (change)="uploadImage($event)">
+      <button mat-raised-button color="accent" (click)="file.click()">Upload Image</button>
+
+      <div [hidden]="!uploadPercent">
+        <mat-progress-bar mode="determinate" value="{{ uploadPercent | async }}"></mat-progress-bar>
+      </div>
+      <div [hidden]="!image">
+        <img [src]="image || '//:0' ">
+      </div>
+      <br>
+      <br>
       <mat-form-field>
         <input matInput placeholder="Post title" [(ngModel)]="post.title" name="title">
       </mat-form-field>

@@ -8,7 +8,7 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
 
-      <input style="display: none" type="file" #file id="file" (change)="uploadImage($event)">
+      <input style="display: none" type="file" name="file" #file id="file" (change)="uploadImage($event)">
       <button mat-raised-button color="accent" (click)="file.click()">Upload Image</button>
       
       <div [hidden]="!uploadPercent">
@@ -17,7 +17,8 @@
       <div [hidden]="!image">
         <img [src]="image || '//:0' ">
       </div>
-
+      <br>
+      <br>
       <mat-form-field>
         <input matInput placeholder="Post title" [(ngModel)]="title" name="title">
       </mat-form-field>
